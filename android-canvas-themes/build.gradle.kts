@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "novalogics.android.canvas_themes_library"
+    namespace = "novalogics.android.canvas_themes"
     compileSdk = 34
 
     defaultConfig {
