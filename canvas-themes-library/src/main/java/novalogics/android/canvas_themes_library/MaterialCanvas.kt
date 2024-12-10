@@ -12,4 +12,7 @@ class MaterialCanvas {
 
     fun getOrangeLustreLightColors(): ColorScheme = themeManager.OrangeLustreLightColors
     fun getOrangeLustreDarkColors(): ColorScheme = themeManager.OrangeLustreDarkColors
+
+    fun getBlackWhiteLightColors(): ColorScheme = themeManager.BlackWhiteLightColors
+    fun getBlackWhiteDarkColors(): ColorScheme = themeManager.BlackWhiteDarkColors
 }
