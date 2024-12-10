@@ -8,4 +8,8 @@ class MaterialCanvas {
     private val themeManager: ThemeManager = ThemeManager
 
     fun getOrangeBlazeLightColors(): ColorScheme = themeManager.OrangeBlazeLightColors
+    fun getOrangeBlazeDarkColors(): ColorScheme = themeManager.OrangeBlazeDarkColors
+
+    fun getOrangeLustreLightColors(): ColorScheme = themeManager.OrangeLustreLightColors
+    fun getOrangeLustreDarkColors(): ColorScheme = themeManager.OrangeLustreDarkColors
 }
