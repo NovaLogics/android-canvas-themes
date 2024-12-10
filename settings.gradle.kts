@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Android Canvas"
 include(":app")
-include(":canvas-themes-library")
+include(":android-canvas-themes")
