@@ -5,14 +5,14 @@ plugins {
 
 android {
     namespace = "novalogics.android.androidcanvas"
-    compileSdk = 34
+    compileSdk = 31
 
     defaultConfig {
         applicationId = "novalogics.android.androidcanvas"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 31
         versionCode = 1
-        versionName = "0.0.3"
+        versionName = "0.0.4"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
