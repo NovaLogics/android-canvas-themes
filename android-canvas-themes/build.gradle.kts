@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "novalogics.android.canvas_themes_library"
-    compileSdk = 34
+    compileSdk = 31
 
     defaultConfig {
         minSdk = 24
@@ -15,13 +15,22 @@ android {
         consumerProguardFiles("consumer-rules.pro")
     }
 
+//    buildTypes {
+//        release {
+//            isMinifyEnabled = false
+//            proguardFiles(
+//                getDefaultProguardFile("proguard-android-optimize.txt"),
+//                "proguard-rules.pro"
+//            )
+//        }
+//    }
     buildTypes {
-        release {
+        getByName("release") {
             isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+        getByName("debug") {
+            isMinifyEnabled = false
         }
     }
     compileOptions {
@@ -45,12 +54,15 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            groupId = "com.github.NovaLogics"
-            artifactId = "android-canvas-themes"
-            version = "0.0.3"
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") { // Use Kotlin DSL type-safe builder
+                from(components["release"]) // Ensure your module is using a release build variant
+                groupId = "com.github.NovaLogics"
+                artifactId = "android-canvas-themes"
+                version = "0.0.4"
+            }
         }
     }
 }
