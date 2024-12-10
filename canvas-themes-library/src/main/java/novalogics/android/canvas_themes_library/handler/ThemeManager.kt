@@ -2,6 +2,7 @@ package novalogics.android.canvas_themes_library.handler
 
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
+import novalogics.android.canvas_themes_library.themes.BlackWhiteTheme
 import novalogics.android.canvas_themes_library.themes.OrangeBlazeTheme
 import novalogics.android.canvas_themes_library.themes.OrangeLustreTheme
 
@@ -73,7 +74,8 @@ object ThemeManager {
         scrim = OrangeBlazeTheme.Dark.scrim
     )
 
-    //--------
+    //----------------------------------------------------------------------------------
+
     // For Light Mode : OrangeLustreTheme
     val OrangeLustreLightColors = lightColorScheme(
         primary = OrangeLustreTheme.Light.primary,
@@ -138,5 +140,73 @@ object ThemeManager {
         surfaceTint = OrangeLustreTheme.Dark.surfaceTint,
         outlineVariant = OrangeLustreTheme.Dark.outlineVariant,
         scrim = OrangeLustreTheme.Dark.scrim
+    )
+
+    //----------------------------------------------------------------------------------
+
+    // For Light Mode : BlackWhiteTheme
+    val BlackWhiteLightColors = lightColorScheme(
+        primary = BlackWhiteTheme.Light.primary,
+        onPrimary = BlackWhiteTheme.Light.onPrimary,
+        primaryContainer = BlackWhiteTheme.Light.primaryContainer,
+        onPrimaryContainer = BlackWhiteTheme.Light.onPrimaryContainer,
+        secondary = BlackWhiteTheme.Light.secondary,
+        onSecondary = BlackWhiteTheme.Light.onSecondary,
+        secondaryContainer = BlackWhiteTheme.Light.secondaryContainer,
+        onSecondaryContainer = BlackWhiteTheme.Light.onSecondaryContainer,
+        tertiary = BlackWhiteTheme.Light.tertiary,
+        onTertiary = BlackWhiteTheme.Light.onTertiary,
+        tertiaryContainer = BlackWhiteTheme.Light.tertiaryContainer,
+        onTertiaryContainer = BlackWhiteTheme.Light.onTertiaryContainer,
+        error = BlackWhiteTheme.Light.error,
+        errorContainer = BlackWhiteTheme.Light.errorContainer,
+        onError = BlackWhiteTheme.Light.onError,
+        onErrorContainer = BlackWhiteTheme.Light.onErrorContainer,
+        background = BlackWhiteTheme.Light.background,
+        onBackground = BlackWhiteTheme.Light.onBackground,
+        surface = BlackWhiteTheme.Light.surface,
+        onSurface = BlackWhiteTheme.Light.onSurface,
+        surfaceVariant = BlackWhiteTheme.Light.surfaceVariant,
+        onSurfaceVariant = BlackWhiteTheme.Light.onSurfaceVariant,
+        outline = BlackWhiteTheme.Light.outline,
+        inverseOnSurface = BlackWhiteTheme.Light.inverseOnSurface,
+        inverseSurface = BlackWhiteTheme.Light.inverseSurface,
+        inversePrimary = BlackWhiteTheme.Light.inversePrimary,
+        surfaceTint = BlackWhiteTheme.Light.surfaceTint,
+        outlineVariant = BlackWhiteTheme.Light.outlineVariant,
+        scrim = BlackWhiteTheme.Light.scrim
+    )
+
+    // For Dark Mode : BlackWhiteTheme
+    val BlackWhiteDarkColors = darkColorScheme(
+        primary = BlackWhiteTheme.Dark.primary,
+        onPrimary = BlackWhiteTheme.Dark.onPrimary,
+        primaryContainer = BlackWhiteTheme.Dark.primaryContainer,
+        onPrimaryContainer = BlackWhiteTheme.Dark.onPrimaryContainer,
+        secondary = BlackWhiteTheme.Dark.secondary,
+        onSecondary = BlackWhiteTheme.Dark.onSecondary,
+        secondaryContainer = BlackWhiteTheme.Dark.secondaryContainer,
+        onSecondaryContainer = BlackWhiteTheme.Dark.onSecondaryContainer,
+        tertiary = BlackWhiteTheme.Dark.tertiary,
+        onTertiary = BlackWhiteTheme.Dark.onTertiary,
+        tertiaryContainer = BlackWhiteTheme.Dark.tertiaryContainer,
+        onTertiaryContainer = BlackWhiteTheme.Dark.onTertiaryContainer,
+        error = BlackWhiteTheme.Dark.error,
+        errorContainer = BlackWhiteTheme.Dark.errorContainer,
+        onError = BlackWhiteTheme.Dark.onError,
+        onErrorContainer = BlackWhiteTheme.Dark.onErrorContainer,
+        background = BlackWhiteTheme.Dark.background,
+        onBackground = BlackWhiteTheme.Dark.onBackground,
+        surface = BlackWhiteTheme.Dark.surface,
+        onSurface = BlackWhiteTheme.Dark.onSurface,
+        surfaceVariant = BlackWhiteTheme.Dark.surfaceVariant,
+        onSurfaceVariant = BlackWhiteTheme.Dark.onSurfaceVariant,
+        outline = BlackWhiteTheme.Dark.outline,
+        inverseOnSurface = BlackWhiteTheme.Dark.inverseOnSurface,
+        inverseSurface = BlackWhiteTheme.Dark.inverseSurface,
+        inversePrimary = BlackWhiteTheme.Dark.inversePrimary,
+        surfaceTint = BlackWhiteTheme.Dark.surfaceTint,
+        outlineVariant = BlackWhiteTheme.Dark.outlineVariant,
+        scrim = BlackWhiteTheme.Dark.scrim
     )
 }
