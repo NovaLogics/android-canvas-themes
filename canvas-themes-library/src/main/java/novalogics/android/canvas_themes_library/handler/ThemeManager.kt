@@ -3,6 +3,7 @@ package novalogics.android.canvas_themes_library.handler
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import novalogics.android.canvas_themes_library.themes.OrangeBlazeTheme
+import novalogics.android.canvas_themes_library.themes.OrangeLustreTheme
 
 object ThemeManager {
 
@@ -70,5 +71,72 @@ object ThemeManager {
         surfaceTint = OrangeBlazeTheme.Dark.surfaceTint,
         outlineVariant = OrangeBlazeTheme.Dark.outlineVariant,
         scrim = OrangeBlazeTheme.Dark.scrim
+    )
+
+    //--------
+    // For Light Mode : OrangeLustreTheme
+    val OrangeLustreLightColors = lightColorScheme(
+        primary = OrangeLustreTheme.Light.primary,
+        onPrimary = OrangeLustreTheme.Light.onPrimary,
+        primaryContainer = OrangeLustreTheme.Light.primaryContainer,
+        onPrimaryContainer = OrangeLustreTheme.Light.onPrimaryContainer,
+        secondary = OrangeLustreTheme.Light.secondary,
+        onSecondary = OrangeLustreTheme.Light.onSecondary,
+        secondaryContainer = OrangeLustreTheme.Light.secondaryContainer,
+        onSecondaryContainer = OrangeLustreTheme.Light.onSecondaryContainer,
+        tertiary = OrangeLustreTheme.Light.tertiary,
+        onTertiary = OrangeLustreTheme.Light.onTertiary,
+        tertiaryContainer = OrangeLustreTheme.Light.tertiaryContainer,
+        onTertiaryContainer = OrangeLustreTheme.Light.onTertiaryContainer,
+        error = OrangeLustreTheme.Light.error,
+        errorContainer = OrangeLustreTheme.Light.errorContainer,
+        onError = OrangeLustreTheme.Light.onError,
+        onErrorContainer = OrangeLustreTheme.Light.onErrorContainer,
+        background = OrangeLustreTheme.Light.background,
+        onBackground = OrangeLustreTheme.Light.onBackground,
+        surface = OrangeLustreTheme.Light.surface,
+        onSurface = OrangeLustreTheme.Light.onSurface,
+        surfaceVariant = OrangeLustreTheme.Light.surfaceVariant,
+        onSurfaceVariant = OrangeLustreTheme.Light.onSurfaceVariant,
+        outline = OrangeLustreTheme.Light.outline,
+        inverseOnSurface = OrangeLustreTheme.Light.inverseOnSurface,
+        inverseSurface = OrangeLustreTheme.Light.inverseSurface,
+        inversePrimary = OrangeLustreTheme.Light.inversePrimary,
+        surfaceTint = OrangeLustreTheme.Light.surfaceTint,
+        outlineVariant = OrangeLustreTheme.Light.outlineVariant,
+        scrim = OrangeLustreTheme.Light.scrim
+    )
+
+    // For Dark Mode : OrangeLustreTheme
+    val OrangeLustreDarkColors = darkColorScheme(
+        primary = OrangeLustreTheme.Dark.primary,
+        onPrimary = OrangeLustreTheme.Dark.onPrimary,
+        primaryContainer = OrangeLustreTheme.Dark.primaryContainer,
+        onPrimaryContainer = OrangeLustreTheme.Dark.onPrimaryContainer,
+        secondary = OrangeLustreTheme.Dark.secondary,
+        onSecondary = OrangeLustreTheme.Dark.onSecondary,
+        secondaryContainer = OrangeLustreTheme.Dark.secondaryContainer,
+        onSecondaryContainer = OrangeLustreTheme.Dark.onSecondaryContainer,
+        tertiary = OrangeLustreTheme.Dark.tertiary,
+        onTertiary = OrangeLustreTheme.Dark.onTertiary,
+        tertiaryContainer = OrangeLustreTheme.Dark.tertiaryContainer,
+        onTertiaryContainer = OrangeLustreTheme.Dark.onTertiaryContainer,
+        error = OrangeLustreTheme.Dark.error,
+        errorContainer = OrangeLustreTheme.Dark.errorContainer,
+        onError = OrangeLustreTheme.Dark.onError,
+        onErrorContainer = OrangeLustreTheme.Dark.onErrorContainer,
+        background = OrangeLustreTheme.Dark.background,
+        onBackground = OrangeLustreTheme.Dark.onBackground,
+        surface = OrangeLustreTheme.Dark.surface,
+        onSurface = OrangeLustreTheme.Dark.onSurface,
+        surfaceVariant = OrangeLustreTheme.Dark.surfaceVariant,
+        onSurfaceVariant = OrangeLustreTheme.Dark.onSurfaceVariant,
+        outline = OrangeLustreTheme.Dark.outline,
+        inverseOnSurface = OrangeLustreTheme.Dark.inverseOnSurface,
+        inverseSurface = OrangeLustreTheme.Dark.inverseSurface,
+        inversePrimary = OrangeLustreTheme.Dark.inversePrimary,
+        surfaceTint = OrangeLustreTheme.Dark.surfaceTint,
+        outlineVariant = OrangeLustreTheme.Dark.outlineVariant,
+        scrim = OrangeLustreTheme.Dark.scrim
     )
 }
