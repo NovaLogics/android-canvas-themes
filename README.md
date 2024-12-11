@@ -2,8 +2,6 @@
 
 ## ɪ  ⁃  ᴀʙᴏᴜᴛ ᴀɴᴅʀᴏɪᴅ ʟɪʙʀᴀʀʏ
 
-<img src="./_archive/screenshots/screenshot_green_blaze.png" width="220" height="480" align="right" />
-
 Android Canvas Themes is a Kotlin library that offers a range of Material Design inspired color themes for Android apps. It includes multiple ready to use themes and supports both light and dark modes, making it easy for developers to design visually appealing user interfaces.
 <br>
 
@@ -11,10 +9,12 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 
 ⁃ ᴄᴏɴᴛᴇɴᴛꜱ ⁃
 
-[ʟɪʙʀᴀʀʏ ꜰᴇᴀᴛᴜʀᴇꜱ](#ɪɪ--ʟɪʙʀᴀʀʏ-ꜰᴇᴀᴛᴜʀᴇꜱ)
-| [ᴘʀᴏᴊᴇᴄᴛ ʙʀᴀɴᴄʜᴇꜱ](#ɪᴠ--ᴘʀᴏᴊᴇᴄᴛ-ʙʀᴀɴᴄʜᴇꜱ)
-| [ᴅᴇᴠ ꜰᴇᴀᴛᴜʀᴇꜱ](#ᴠ--ʙᴇʜɪɴᴅ-ᴛʜᴇ-ᴄᴏᴅᴇ-ᴅᴇᴠ-ꜰᴇᴀᴛᴜʀᴇꜱ)
-| [ᴘʀᴏᴊᴇᴄᴛ ɴᴏᴛᴇꜱ](#ᴠɪ--ᴘʀᴏᴊᴇᴄᴛ-ɴᴏᴛᴇꜱ)
+[ɪɴꜱᴛᴀʟʟᴀᴛɪᴏɴ](#ɪɪ--ɪɴꜱᴛᴀʟʟᴀᴛɪᴏɴ)
+| [ʟɪʙʀᴀʀʏ ᴜꜱᴀɢᴇ](#ɪɪɪ--ʟɪʙʀᴀʀʏ-ᴜꜱᴀɢᴇ)
+| [ᴠɪꜱᴜᴀʟ ᴘʀᴇꜱᴇɴᴛᴀᴛɪᴏɴ](#ɪᴠ--ᴠɪꜱᴜᴀʟ-ᴛᴏᴜʀ-ᴏꜰ-ᴛʜᴇ-ʟɪʙʀᴀʀʏ-ᴜꜱᴀɢᴇ)
+| [ᴘʀᴏᴊᴇᴄᴛ ʙʀᴀɴᴄʜᴇꜱ](#ᴠ--ᴘʀᴏᴊᴇᴄᴛ-ʙʀᴀɴᴄʜᴇꜱ)
+| [ᴅᴇᴠ ꜰᴇᴀᴛᴜʀᴇꜱ](#ᴠɪ--ʙᴇʜɪɴᴅ-ᴛʜᴇ-ᴄᴏᴅᴇ-ᴅᴇᴠ-ꜰᴇᴀᴛᴜʀᴇꜱ)
+| [ᴘʀᴏᴊᴇᴄᴛ ɴᴏᴛᴇꜱ](#ᴠɪɪ--ᴘʀᴏᴊᴇᴄᴛ-ɴᴏᴛᴇꜱ)
 
 <br>
 
@@ -23,20 +23,65 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 
 [![MIN API LEVEL](https://img.shields.io/badge/-MIN%20SDK%20|%2024-1C1E24?logo=planetscale&logoColor=00C7B7&style=for-the-badge)](#)
 [![Target Version](https://img.shields.io/badge/-Target%20SDK%20|%2034-1C1E24?logo=planetscale&logoColor=00C7B7&style=for-the-badge)](#)
-
 [![Jitpack Releases](https://img.shields.io/badge/-Jitpack%20|%200.0.7-1C1E24?logo=planetscale&logoColor=00C7B7&style=for-the-badge)](#)
-
 [![License: MIT](https://img.shields.io/badge/-LICENSE%20|%20MIT-1C1E24?logo=maas&logoColor=00C7B7&style=for-the-badge)](./LICENSE)
 <br>
 <br>
 
-
+<img src="./_archive/screenshots/screenshot_green_blaze.png" width="220" height="480" />
 
 <br>
 
 </div>
 
-## ɪɪ ⁃ ʟɪʙʀᴀʀʏ ꜰᴇᴀᴛᴜʀᴇꜱ
+## ɪɪ ⁃ ɪɴꜱᴛᴀʟʟᴀᴛɪᴏɴ
+
+Add the following to your project's settings.gradle to enable JitPack:
+
+```md
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+Then, add the dependency to your build.gradle file:
+```md
+dependencies {
+    implementation 'com.github.novalogics:android-canvas-themes:0.0.7'
+}
+```
+
+<br>
+
+## ɪɪɪ ⁃ ʟɪʙʀᴀʀʏ ᴜꜱᴀɢᴇ
+
+### ⭓ Accessing Themes
+
+The library provides multiple pre-built themes, accessible through the MaterialCanvas object. Each theme contains both lightColorScheme and darkColorScheme.
+
+```md
+MaterialCanvas.greenBlazeTheme.darkColorScheme
+MaterialCanvas.amberBlazeTheme.lightColors.primary
+```
+
+#### Example: Applying a Theme
+To apply a theme in your composables, use the MaterialTheme and pass the desired color scheme.
+
+```md
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.runtime.Composable
+import com.example.androidcanvasthemes.MaterialCanvas
+
+@Composable
+fun MyApp() {
+MaterialTheme(colorScheme = MaterialCanvas.amberBlazeTheme.lightColorScheme) {
+// Your UI components go here
+}
+}
+```
 
 ### ⭓ Library Features
 
@@ -55,7 +100,7 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 
 <hr>
 
-## ɪɪɪ ⁃ ᴠɪꜱᴜᴀʟ ᴛᴏᴜʀ ᴏꜰ ᴛʜᴇ ᴀᴘᴘ: ꜱᴄʀᴇᴇɴꜱ
+## ɪᴠ ⁃ ᴠɪꜱᴜᴀʟ ᴛᴏᴜʀ ᴏꜰ ᴛʜᴇ ʟɪʙʀᴀʀʏ ᴜꜱᴀɢᴇ
 
 <p align="center">
 <img 
@@ -99,7 +144,7 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 
 
 #
-## ɪᴠ ⁃ ᴘʀᴏᴊᴇᴄᴛ ʙʀᴀɴᴄʜᴇꜱ
+## ᴠ ⁃ ᴘʀᴏᴊᴇᴄᴛ ʙʀᴀɴᴄʜᴇꜱ
 
 <!-- Main / Master / Production Branch -->
 
@@ -178,15 +223,15 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 <!-- Experimental → Feature → Development → Release → Staging → Main/Production   -->
 
 
-[branch-main]:  https://github.com/NovaLogics/lyxa-live-flutter-app/tree/main
-[branch-development]:  https://github.com/NovaLogics/lyxa-live-flutter-app/tree/development
-[branch-staging]:  https://github.com/NovaLogics/lyxa-live-flutter-app/tree/staging
+[branch-main]:  https://github.com/NovaLogics/android-canvas-themes/tree/main
+[branch-development]:  https://github.com/NovaLogics/android-canvas-themes/tree/development
+[branch-staging]:  https://github.com/NovaLogics/android-canvas-themes/tree/staging
 
-[branch-feature-NAME]:  https://github.com/dizzcode/nova-styles-android-app/tree/staging
+[branch-feature-NAME]:  https://github.com/NovaLogics/android-canvas-themes/tree/staging
 
-[branch-hotfix-NAME]:  https://github.com/dizzcode/nova-styles-android-app/tree/staging
+[branch-hotfix-NAME]:  https://github.com/NovaLogics/android-canvas-themes/tree/staging
 
-[branch-bugfix-NAME]:  https://github.com/nova-styles-android-app/tree/staging
+[branch-bugfix-NAME]:  https://github.com/NovaLogics/android-canvas-themes/tree/staging
 
 <br>  
 
@@ -197,7 +242,7 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 
 
 #
-## ᴠ ⁃ ʙᴇʜɪɴᴅ ᴛʜᴇ ᴄᴏᴅᴇ: ᴅᴇᴠ ꜰᴇᴀᴛᴜʀᴇꜱ
+## ᴠɪ ⁃ ʙᴇʜɪɴᴅ ᴛʜᴇ ᴄᴏᴅᴇ: ᴅᴇᴠ ꜰᴇᴀᴛᴜʀᴇꜱ
 
 #
 ### ⭓ Project Documents
@@ -213,7 +258,7 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 
 
 #
-# ᴠɪ ⁃ ᴘʀᴏᴊᴇᴄᴛ ɴᴏᴛᴇꜱ
+# ᴠɪɪ ⁃ ᴘʀᴏᴊᴇᴄᴛ ɴᴏᴛᴇꜱ
 
 
 <br>
