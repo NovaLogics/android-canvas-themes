@@ -64,16 +64,28 @@ fun ThemeDemoScreen() {
                 colors = CardDefaults.cardColors(containerColor = colorScheme.scrim),
             ) {
                 Text(
-                    "Grayscale Theme : Dark",
-                    color = onBackground,
+                    "Grayscale Theme",
+                    color = colorScheme.onPrimary,
                     style = MaterialTheme.typography.titleLarge,
                     textAlign = TextAlign.Center,
-                    fontSize = 24.sp,
+                    fontSize = 20.sp,
                     letterSpacing = 0.8.sp,
                     fontWeight = FontWeight.Bold,
                     fontFamily = FontFamily.Serif,
                     modifier = Modifier
-                        .fillMaxWidth().padding(16.dp)
+                        .fillMaxWidth().padding(top =  8.dp)
+                )
+                Text(
+                    " \uD83C\uDF18 Dark Mode", //Light theme : ⚡ | Night: 🌘
+                    color = colorScheme.onSurface,
+                    style = MaterialTheme.typography.titleLarge,
+                    textAlign = TextAlign.Center,
+                    fontSize = 20.sp,
+                    letterSpacing = 0.9.sp,
+                    fontWeight = FontWeight.W600,
+                    fontFamily = FontFamily.SansSerif,
+                    modifier = Modifier
+                        .fillMaxWidth().padding(bottom =  8.dp)
                 )
             }
             Spacer(modifier = Modifier.height(24.dp))
