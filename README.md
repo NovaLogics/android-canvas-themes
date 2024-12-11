@@ -2,6 +2,8 @@
 
 ## ɪ  ⁃  ᴀʙᴏᴜᴛ ᴀɴᴅʀᴏɪᴅ ʟɪʙʀᴀʀʏ
 
+<img src="./_archive/screenshots/screenshot_green_blaze.png" width="200" height="460" align="right" />
+
 Android Canvas Themes is a Kotlin library that offers a range of Material Design inspired color themes for Android apps. It includes multiple ready to use themes and supports both light and dark modes, making it easy for developers to design visually appealing user interfaces.
 <br>
 
@@ -26,8 +28,8 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 <br>
 <br>
 
-<img src="./_archive/screenshots/screenshot_green_blaze.png" width="200" height="460" />
-<img src="./_archive/screenshots/screenshot_green_blaze.png" width="200" height="460"  />
+
+
 <br>
 
 </div>
