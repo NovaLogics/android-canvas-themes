@@ -35,7 +35,7 @@ import novalogics.android.canvasthemes.MaterialCanvas
 fun ThemeDemoScreen() {
     val colorScheme = MaterialCanvas.greenBlazeTheme.darkColorScheme
     val isLightMode = false
-    val themeName = "Orange Blaze Theme"
+    val themeName = "Green Blaze Theme"
 
     val currentMode = if (isLightMode) " ✦ Light Mode ✦" else " ✧ Dark Mode ✧"
     val imageRes = if (isLightMode) R.drawable.ic_light_mode else R.drawable.ic_night_mode
