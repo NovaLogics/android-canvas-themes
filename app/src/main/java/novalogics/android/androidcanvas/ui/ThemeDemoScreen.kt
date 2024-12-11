@@ -2,7 +2,6 @@ package novalogics.android.androidcanvas.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.foundation.background
@@ -30,11 +29,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import novalogics.android.androidcanvas.R
 import novalogics.android.canvas_themes.material_canvas.MaterialCanvas
-//Light theme : ⚡ | Night: 🌘
 
 @Composable
 fun ThemeDemoScreen() {
-    val colorScheme = MaterialCanvas.grayscaleTheme.darkColorScheme
+    val colorScheme = MaterialCanvas.orangeBlazeTheme.lightColorScheme
+    val isLightMode = false
+    val themeName = "Grayscale Theme"
+
+    val currentMode = if (isLightMode) " ⚡ Light Mode" else " \uD83E\uDD87 Dark Mode"
+    val imageRes = if (isLightMode) R.drawable.ic_light_mode else R.drawable.ic_night_mode
 
     Box(
         modifier = Modifier
@@ -46,10 +49,17 @@ fun ThemeDemoScreen() {
                 .fillMaxSize()
                 .padding(12.dp)
         ) {
-            ThemeCard(colorScheme = colorScheme)
+            ThemeCard(
+                colorScheme = colorScheme,
+                currentMode = currentMode,
+                themeName = themeName
+            )
             Spacer(modifier = Modifier.height(24.dp))
 
-            ButtonRow(colorScheme = colorScheme)
+            ButtonRow(
+                colorScheme = colorScheme,
+                imageRes = imageRes,
+            )
             Spacer(modifier = Modifier.height(42.dp))
 
             SurfaceVariantSlider(colorScheme = colorScheme)
@@ -62,39 +72,43 @@ fun ThemeDemoScreen() {
 }
 
 @Composable
-fun ThemeCard(colorScheme: ColorScheme) {
+fun ThemeCard(colorScheme: ColorScheme, currentMode: String, themeName: String) {
     Card(
         modifier = Modifier
             .fillMaxWidth(),
         shape = RoundedCornerShape(topStart = 16.dp, bottomEnd = 16.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
-        colors = CardDefaults.cardColors(containerColor = colorScheme.scrim),
+        colors = CardDefaults.cardColors(containerColor = colorScheme.onBackground),
     ) {
         Text(
-            "Grayscale Theme",
-            color = colorScheme.onPrimary,
+            themeName,
+            color = colorScheme.background,
             textAlign = TextAlign.Center,
             fontSize = 20.sp,
             letterSpacing = 0.8.sp,
             fontWeight = FontWeight.Bold,
             fontFamily = FontFamily.Serif,
-            modifier = Modifier.fillMaxWidth().padding(top = 12.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 12.dp)
         )
         Text(
-            " \uD83C\uDF18 Dark Mode",
-            color = colorScheme.onTertiary,
+            currentMode,
+            color = colorScheme.background,
             textAlign = TextAlign.Center,
             fontSize = 20.sp,
             letterSpacing = 0.9.sp,
             fontWeight = FontWeight.W600,
             fontFamily = FontFamily.SansSerif,
-            modifier = Modifier.fillMaxWidth().padding(12.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(12.dp)
         )
     }
 }
 
 @Composable
-fun ButtonRow(colorScheme: ColorScheme) {
+fun ButtonRow(colorScheme: ColorScheme, imageRes: Int) {
     Row(
         modifier = Modifier
             .fillMaxWidth(),
@@ -102,7 +116,7 @@ fun ButtonRow(colorScheme: ColorScheme) {
         horizontalArrangement = Arrangement.spacedBy(16.dp),
     ) {
         ButtonColumn(colorScheme = colorScheme)
-        NightModeImage(colorScheme = colorScheme)
+        NightModeImage(colorScheme = colorScheme, imageRes = imageRes)
     }
 }
 
@@ -180,9 +194,9 @@ fun TertiaryButton(colorScheme: ColorScheme) {
 }
 
 @Composable
-fun NightModeImage(colorScheme: ColorScheme) {
+fun NightModeImage(colorScheme: ColorScheme, imageRes: Int) {
     Image(
-        painter = painterResource(id = R.drawable.ic_night_mode),
+        painter = painterResource(id = imageRes),
         contentDescription = null,
         modifier = Modifier
             .size(132.dp)
