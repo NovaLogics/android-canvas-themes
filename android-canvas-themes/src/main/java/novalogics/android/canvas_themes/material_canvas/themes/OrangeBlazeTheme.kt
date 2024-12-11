@@ -1,4 +1,4 @@
-package novalogics.android.canvas_themes.material_style.themes
+package novalogics.android.canvas_themes.material_canvas.themes
 
 import androidx.compose.ui.graphics.Color
 

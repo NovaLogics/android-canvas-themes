@@ -1,4 +1,4 @@
-package novalogics.android.canvas_themes.material_style.themes.grayscale_theme
+package novalogics.android.canvas_themes.material_canvas.themes.grayscale_theme
 
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme

@@ -1,10 +1,10 @@
-package novalogics.android.canvas_themes.material_style.handler
+package novalogics.android.canvas_themes.material_canvas.handler
 
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
-import novalogics.android.canvas_themes.material_style.themes.grayscale_theme.GrayscalePalette
-import novalogics.android.canvas_themes.material_style.themes.OrangeBlazeTheme
-import novalogics.android.canvas_themes.material_style.themes.OrangeLustreTheme
+import novalogics.android.canvas_themes.material_canvas.themes.grayscale_theme.GrayscalePalette
+import novalogics.android.canvas_themes.material_canvas.themes.OrangeBlazeTheme
+import novalogics.android.canvas_themes.material_canvas.themes.OrangeLustreTheme
 
 object ThemeManager {
 
