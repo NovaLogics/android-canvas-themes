@@ -1,8 +1,8 @@
-package novalogics.android.canvas_themes_library.themes
+package novalogics.android.canvas_themes.material_canvas.themes.grayscale_theme
 
 import androidx.compose.ui.graphics.Color
 
-object BlackWhiteTheme {
+object GrayscaleColors {
 
     object Light {
         val primary = Color(0xFF000000) // Primary color (Black)

@@ -1,4 +1,4 @@
-package novalogics.android.canvas_themes_library
+package novalogics.android.canvas_themes
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package novalogics.android.canvas_themes_library
+package novalogics.android.canvas_themes
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("novalogics.android.canvas_themes_library.test", appContext.packageName)
+        assertEquals("novalogics.android.canvas_themes.test", appContext.packageName)
     }
 }
