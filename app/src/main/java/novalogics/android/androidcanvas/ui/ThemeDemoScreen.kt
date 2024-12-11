@@ -34,22 +34,13 @@ import novalogics.android.canvas_themes.material_canvas.MaterialCanvas
 @Composable
 fun ThemeDemoScreen() {
     val colorScheme = MaterialCanvas.grayscaleTheme.darkColorScheme
-    val primary = colorScheme.primary
-    val onPrimary = colorScheme.onPrimary
-    val secondary = colorScheme.secondary
-    val onSecondary = colorScheme.onSecondary
-    val error = colorScheme.error
-    val onError = colorScheme.onError
-    val surface = colorScheme.surface
-    val onSurface = colorScheme.onSurface
-    val background = colorScheme.background
-    val onBackground = colorScheme.onBackground
 
-    // Column to arrange components vertically
+
+
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(background)
+            .background(colorScheme.background)
     ) {
         Column(
             modifier = Modifier
@@ -66,26 +57,24 @@ fun ThemeDemoScreen() {
                 Text(
                     "Grayscale Theme",
                     color = colorScheme.onPrimary,
-                    style = MaterialTheme.typography.titleLarge,
                     textAlign = TextAlign.Center,
                     fontSize = 20.sp,
                     letterSpacing = 0.8.sp,
                     fontWeight = FontWeight.Bold,
                     fontFamily = FontFamily.Serif,
                     modifier = Modifier
-                        .fillMaxWidth().padding(top =  8.dp)
+                        .fillMaxWidth().padding(top =  12.dp)
                 )
                 Text(
                     " \uD83C\uDF18 Dark Mode", //Light theme : ⚡ | Night: 🌘
-                    color = colorScheme.onSurface,
-                    style = MaterialTheme.typography.titleLarge,
+                    color = colorScheme.onTertiary,
                     textAlign = TextAlign.Center,
                     fontSize = 20.sp,
                     letterSpacing = 0.9.sp,
                     fontWeight = FontWeight.W600,
                     fontFamily = FontFamily.SansSerif,
                     modifier = Modifier
-                        .fillMaxWidth().padding(bottom =  8.dp)
+                        .fillMaxWidth().padding(12.dp)
                 )
             }
             Spacer(modifier = Modifier.height(24.dp))
@@ -104,12 +93,12 @@ fun ThemeDemoScreen() {
                     // Primary Button
                     Button(
                         onClick = {},
-                        colors = buttonColors(containerColor = primary),
+                        colors = buttonColors(containerColor = colorScheme.primary),
                         elevation = ButtonDefaults.buttonElevation(defaultElevation = 4.dp)
                     ) {
                         Text(
                             "Primary Button",
-                            color = onPrimary,
+                            color = colorScheme.onPrimary,
                             fontWeight = FontWeight.Bold,
                             fontSize = 18.sp,
                             fontFamily = FontFamily.Serif,
@@ -125,12 +114,12 @@ fun ThemeDemoScreen() {
                     // Secondary Button
                     Button(
                         onClick = { /*TODO*/ },
-                        colors = buttonColors(containerColor = secondary),
+                        colors = buttonColors(containerColor = colorScheme.secondary),
                         elevation = ButtonDefaults.buttonElevation(defaultElevation = 4.dp)
                     ) {
                         Text(
                             "Secondary Button",
-                            color = onSecondary,
+                            color = colorScheme.onSecondary,
                             fontWeight = FontWeight.W500,
                             fontSize = 18.sp,
                             fontFamily = FontFamily.SansSerif,
@@ -191,7 +180,7 @@ fun ThemeDemoScreen() {
                 onValueChange = { },
                 modifier = Modifier.fillMaxWidth(),
                 colors = SliderDefaults.colors(
-                    thumbColor = colorScheme.surfaceVariant,
+                    thumbColor = colorScheme.onSurfaceVariant,
                     activeTrackColor = colorScheme.surfaceVariant,
                     inactiveTrackColor = colorScheme.outlineVariant
                 )
@@ -214,15 +203,15 @@ fun ThemeDemoScreen() {
                     CardItem(
                         text = "Surface\nCard",
                         icon = Icons.Filled.Favorite,
-                        surface = surface,
-                        onSurface = onSurface
+                        surface = colorScheme.surface,
+                        onSurface = colorScheme.onSurface
                     )
                     // Second Card
                     CardItem(
                         text = "Error\nBox ",
                         icon = Icons.Filled.Warning,
-                        surface = error,
-                        onSurface = onError
+                        surface = colorScheme.error,
+                        onSurface = colorScheme.onError
                     )
                 }
 
@@ -241,10 +230,10 @@ fun ThemeDemoScreen() {
                     )
                     // Fourth Card
                     CardItem(
-                        text = "Scrim\nOverlay",
+                        text = "Scrim\nCard",
                         icon = Icons.Filled.PlayArrow,
-                        surface = colorScheme.scrim.copy(alpha = 0.3f),
-                        onSurface = colorScheme.onSurface
+                        surface = colorScheme.scrim,
+                        onSurface = colorScheme.onPrimary
                     )
                 }
             }
@@ -257,7 +246,7 @@ fun ThemeDemoScreen() {
             ) {
                 Text(
                     "Scrim Overlay",
-                    color = onSurface,
+                    color = colorScheme.onSurface,
                     fontWeight = FontWeight.W500,
                     fontSize = 16.sp,
                     letterSpacing = 0.6.sp,
