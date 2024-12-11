@@ -5,7 +5,7 @@ import androidx.compose.material3.lightColorScheme
 
 object GrayscaleScheme {
     // For Light Mode : BlackWhiteTheme
-    val GrayscaleLightColorScheme = lightColorScheme(
+    val LightColorScheme = lightColorScheme(
         primary = GrayscaleColors.Light.primary,
         onPrimary = GrayscaleColors.Light.onPrimary,
         primaryContainer = GrayscaleColors.Light.primaryContainer,
@@ -38,7 +38,7 @@ object GrayscaleScheme {
     )
 
     // For Dark Mode : BlackWhiteTheme
-    val GrayscaleDarkColorScheme = darkColorScheme(
+    val DarkColorScheme = darkColorScheme(
         primary = GrayscaleColors.Dark.primary,
         onPrimary = GrayscaleColors.Dark.onPrimary,
         primaryContainer = GrayscaleColors.Dark.primaryContainer,
