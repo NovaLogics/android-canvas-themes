@@ -1,5 +1,6 @@
 package novalogics.android.androidcanvas.ui
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
@@ -19,6 +20,7 @@ import androidx.compose.material3.ButtonDefaults.buttonColors
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
@@ -34,7 +36,7 @@ import novalogics.android.canvas_themes.material_canvas.MaterialCanvas
 fun ThemeDemoScreen() {
     val colorScheme = MaterialCanvas.orangeBlazeTheme.lightColorScheme
     val isLightMode = false
-    val themeName = "Grayscale Theme"
+    val themeName = "Orange Blaze Theme"
 
     val currentMode = if (isLightMode) " ⚡ Light Mode" else " \uD83E\uDD87 Dark Mode"
     val imageRes = if (isLightMode) R.drawable.ic_light_mode else R.drawable.ic_night_mode
@@ -84,7 +86,7 @@ fun ThemeCard(colorScheme: ColorScheme, currentMode: String, themeName: String) 
             themeName,
             color = colorScheme.background,
             textAlign = TextAlign.Center,
-            fontSize = 20.sp,
+            fontSize = 22.sp,
             letterSpacing = 0.8.sp,
             fontWeight = FontWeight.Bold,
             fontFamily = FontFamily.Serif,
@@ -291,10 +293,17 @@ fun CardItem(text: String, icon: ImageVector, surface: Color, onSurface: Color) 
         modifier = Modifier
             .width(180.dp)
             .height(160.dp)
-            .padding(8.dp),
+            .padding(8.dp)
+            .shadow(
+                elevation = 2.dp,
+                shape = RoundedCornerShape(12.dp),
+                clip = false
+            )
+            .border(4.dp, onSurface.copy(alpha = 0.4f), RoundedCornerShape(12.dp)),
         shape = RoundedCornerShape(12.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
-        colors = CardDefaults.cardColors(containerColor = surface)
+        colors = CardDefaults.cardColors(containerColor = surface),
+
     ) {
         Column(
             modifier = Modifier
