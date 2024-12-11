@@ -2,7 +2,7 @@
 
 ## ɪ  ⁃  ᴀʙᴏᴜᴛ ᴀɴᴅʀᴏɪᴅ ʟɪʙʀᴀʀʏ
 
-<img src="./_archive/screenshots/screenshot_green_blaze.png" width="200" height="460" align="right" />
+<img src="./_archive/screenshots/screenshot_green_blaze.png" width="220" height="480" align="right" />
 
 Android Canvas Themes is a Kotlin library that offers a range of Material Design inspired color themes for Android apps. It includes multiple ready to use themes and supports both light and dark modes, making it easy for developers to design visually appealing user interfaces.
 <br>
@@ -16,7 +16,6 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 | [ᴅᴇᴠ ꜰᴇᴀᴛᴜʀᴇꜱ](#ᴠ--ʙᴇʜɪɴᴅ-ᴛʜᴇ-ᴄᴏᴅᴇ-ᴅᴇᴠ-ꜰᴇᴀᴛᴜʀᴇꜱ)
 | [ᴘʀᴏᴊᴇᴄᴛ ɴᴏᴛᴇꜱ](#ᴠɪ--ᴘʀᴏᴊᴇᴄᴛ-ɴᴏᴛᴇꜱ)
 
-
 <br>
 
 [![Platform](https://img.shields.io/badge/-Android%20|%20Platform-2E8B57?logo=android&logoColor=white&style=for-the-badge)](#)
@@ -24,6 +23,9 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 
 [![MIN API LEVEL](https://img.shields.io/badge/-MIN%20SDK%20|%2024-1C1E24?logo=planetscale&logoColor=00C7B7&style=for-the-badge)](#)
 [![Target Version](https://img.shields.io/badge/-Target%20SDK%20|%2034-1C1E24?logo=planetscale&logoColor=00C7B7&style=for-the-badge)](#)
+
+[![Jitpack Releases](https://img.shields.io/badge/-Jitpack%20|%200.0.7-1C1E24?logo=planetscale&logoColor=00C7B7&style=for-the-badge)](#)
+
 [![License: MIT](https://img.shields.io/badge/-LICENSE%20|%20MIT-1C1E24?logo=maas&logoColor=00C7B7&style=for-the-badge)](./LICENSE)
 <br>
 <br>
