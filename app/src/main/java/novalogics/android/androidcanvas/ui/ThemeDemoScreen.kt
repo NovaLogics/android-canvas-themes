@@ -1,6 +1,5 @@
 package novalogics.android.androidcanvas.ui
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
@@ -21,9 +20,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -34,11 +36,11 @@ import novalogics.android.canvas_themes.material_canvas.MaterialCanvas
 
 @Composable
 fun ThemeDemoScreen() {
-    val colorScheme = MaterialCanvas.orangeBlazeTheme.lightColorScheme
+    val colorScheme = MaterialCanvas.tealBlazeTheme.darkColorScheme
     val isLightMode = false
     val themeName = "Orange Blaze Theme"
 
-    val currentMode = if (isLightMode) " ⚡ Light Mode" else " \uD83E\uDD87 Dark Mode"
+    val currentMode = if (isLightMode) " ✦ Light Mode ✦" else " ✧ Dark Mode ✧"
     val imageRes = if (isLightMode) R.drawable.ic_light_mode else R.drawable.ic_night_mode
 
     Box(
@@ -49,7 +51,7 @@ fun ThemeDemoScreen() {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(12.dp)
+                .padding(start =  12.dp, bottom = 12.dp, end = 12.dp, top = 38.dp)
         ) {
             ThemeCard(
                 colorScheme = colorScheme,
@@ -75,36 +77,45 @@ fun ThemeDemoScreen() {
 
 @Composable
 fun ThemeCard(colorScheme: ColorScheme, currentMode: String, themeName: String) {
+val cardShape = RoundedCornerShape(topStart = 16.dp, bottomEnd = 16.dp)
     Card(
         modifier = Modifier
-            .fillMaxWidth(),
-        shape = RoundedCornerShape(topStart = 16.dp, bottomEnd = 16.dp),
+            .fillMaxWidth()
+            .shadow(
+                elevation = 2.dp,
+                shape = cardShape,
+                clip = false
+            )
+            .border(2.dp, colorScheme.background.copy(alpha = 0.5f), cardShape),
+        shape = cardShape,
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
-        colors = CardDefaults.cardColors(containerColor = colorScheme.onBackground),
+        colors = CardDefaults.cardColors(containerColor = colorScheme.tertiary),
     ) {
         Text(
-            themeName,
-            color = colorScheme.background,
-            textAlign = TextAlign.Center,
+            text = themeName,
+            color = colorScheme.onSecondary,
             fontSize = 22.sp,
             letterSpacing = 0.8.sp,
             fontWeight = FontWeight.Bold,
             fontFamily = FontFamily.Serif,
+            textAlign = TextAlign.Center,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 12.dp)
         )
+
         Text(
-            currentMode,
-            color = colorScheme.background,
+            text = currentMode,
+            color = colorScheme.surface,
+            fontSize = 20.1.sp,
+            letterSpacing = 0.8.sp,
+            fontWeight = FontWeight.Bold,
+            fontFamily = FontFamily.Serif,
             textAlign = TextAlign.Center,
-            fontSize = 20.sp,
-            letterSpacing = 0.9.sp,
-            fontWeight = FontWeight.W600,
-            fontFamily = FontFamily.SansSerif,
             modifier = Modifier
+                .padding(bottom = 12.dp, top = 8.dp)
                 .fillMaxWidth()
-                .padding(12.dp)
+                .offset(1.dp, 1.dp) // Offset to simulate a border
         )
     }
 }
@@ -282,7 +293,7 @@ fun SecondRow(colorScheme: ColorScheme) {
             text = "Scrim\nCard",
             icon = Icons.Filled.PlayArrow,
             surface = colorScheme.scrim,
-            onSurface = colorScheme.onPrimary
+            onSurface = colorScheme.secondary
         )
     }
 }
