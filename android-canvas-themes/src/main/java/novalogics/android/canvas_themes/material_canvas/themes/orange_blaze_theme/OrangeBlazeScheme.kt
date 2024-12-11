@@ -5,7 +5,7 @@ import androidx.compose.material3.lightColorScheme
 
 object OrangeBlazeScheme {
     // For Light Mode : OrangeBlazeTheme
-    val OrangeBlazeLightColorScheme = lightColorScheme(
+    val LightColorScheme = lightColorScheme(
         primary = OrangeBlazeColors.Light.primary,
         onPrimary = OrangeBlazeColors.Light.onPrimary,
         primaryContainer = OrangeBlazeColors.Light.primaryContainer,
@@ -38,7 +38,7 @@ object OrangeBlazeScheme {
     )
 
     // For Dark Mode : OrangeBlazeTheme
-    val OrangeBlazeDarkColorScheme = darkColorScheme(
+    val DarkColorScheme = darkColorScheme(
         primary = OrangeBlazeColors.Dark.primary,
         onPrimary = OrangeBlazeColors.Dark.onPrimary,
         primaryContainer = OrangeBlazeColors.Dark.primaryContainer,
