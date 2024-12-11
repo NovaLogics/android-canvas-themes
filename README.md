@@ -16,14 +16,8 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 | [ᴅᴇᴠ ꜰᴇᴀᴛᴜʀᴇꜱ](#ᴠɪ--ʙᴇʜɪɴᴅ-ᴛʜᴇ-ᴄᴏᴅᴇ-ᴅᴇᴠ-ꜰᴇᴀᴛᴜʀᴇꜱ)
 | [ᴘʀᴏᴊᴇᴄᴛ ɴᴏᴛᴇꜱ](#ᴠɪɪ--ᴘʀᴏᴊᴇᴄᴛ-ɴᴏᴛᴇꜱ)
 
-<br>
-
-[![Platform](https://img.shields.io/badge/-Android%20|%20Platform-2E8B57?logo=android&logoColor=white&style=for-the-badge)](#)
-[![Language](https://img.shields.io/badge/-Kotlin%20|%20Language-%2307405e?logo=kotlin&logoColor=white&style=for-the-badge)](#)
-
-[![MIN API LEVEL](https://img.shields.io/badge/-MIN%20SDK%20|%2024-1C1E24?logo=planetscale&logoColor=00C7B7&style=for-the-badge)](#)
-[![Target Version](https://img.shields.io/badge/-Target%20SDK%20|%2034-1C1E24?logo=planetscale&logoColor=00C7B7&style=for-the-badge)](#)
-[![Jitpack Releases](https://img.shields.io/badge/-Jitpack%20|%200.0.7-1C1E24?logo=planetscale&logoColor=00C7B7&style=for-the-badge)](#)
+[![Platform](https://img.shields.io/badge/-Android-2E8B57?logo=android&logoColor=white&style=for-the-badge)](#)
+[![Language](https://img.shields.io/badge/-Kotlin-%2307405e?logo=kotlin&logoColor=white&style=for-the-badge)](#)
 [![License: MIT](https://img.shields.io/badge/-LICENSE%20|%20MIT-1C1E24?logo=maas&logoColor=00C7B7&style=for-the-badge)](./LICENSE)
 <br>
 <br>
@@ -35,6 +29,9 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 </div>
 
 ## ɪɪ ⁃ ɪɴꜱᴛᴀʟʟᴀᴛɪᴏɴ
+
+
+[![Jitpack Releases](https://img.shields.io/badge/-Jitpack%20|%200.0.7-1C1E24?logo=planetscale&logoColor=00C7B7&style=for-the-badge)](#)
 
 Add the following to your project's settings.gradle to enable JitPack:
 
@@ -73,7 +70,7 @@ To apply a theme in your composables, use the MaterialTheme and pass the desired
 ```md
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
-import com.example.androidcanvasthemes.MaterialCanvas
+import com.example.android.canvasthemes.MaterialCanvas
 
 @Composable
 fun MyApp() {
@@ -95,6 +92,9 @@ MaterialTheme(colorScheme = MaterialCanvas.amberBlazeTheme.lightColorScheme) {
 
 ##
 ### ⭓ Requirements
+
+[![MIN API LEVEL](https://img.shields.io/badge/-MIN%20SDK%20|%2024-1C1E24?logo=planetscale&logoColor=00C7B7&style=for-the-badge)](#)
+[![Target Version](https://img.shields.io/badge/-Target%20SDK%20|%2034-1C1E24?logo=planetscale&logoColor=00C7B7&style=for-the-badge)](#)
 
 - **Minimum SDK Version**: 24
 
