@@ -20,23 +20,20 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import novalogics.android.androidcanvas.R
-import novalogics.android.canvas_themes.material_canvas.MaterialCanvas
+import novalogics.android.canvasthemes.MaterialCanvas
 
 @Composable
 fun ThemeDemoScreen() {
-    val colorScheme = MaterialCanvas.tealBlazeTheme.darkColorScheme
+    val colorScheme = MaterialCanvas.greenBlazeTheme.darkColorScheme
     val isLightMode = false
     val themeName = "Orange Blaze Theme"
 
