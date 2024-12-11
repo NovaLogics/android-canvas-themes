@@ -162,17 +162,16 @@ fun ThemeDemoScreen() {
                 )
 
             }
-            Spacer(modifier = Modifier.height(32.dp))
+            Spacer(modifier = Modifier.height(42.dp))
 
             // Sliders to show the surfaceVariant and outline
             Text(
                 "Surface Variant",
                 color = colorScheme.onSurfaceVariant,
                 fontWeight = FontWeight.W200,
-                fontSize = 20.sp,
+                fontSize = 22.sp,
                 fontFamily = FontFamily.Serif,
-
-                letterSpacing = 0.6.sp,
+                letterSpacing = 1.2.sp,
             )
             Spacer(modifier = Modifier.height(2.dp))
             Slider(
@@ -185,7 +184,7 @@ fun ThemeDemoScreen() {
                     inactiveTrackColor = colorScheme.outlineVariant
                 )
             )
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(24.dp))
 
             Column(
                 modifier = Modifier
