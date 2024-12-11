@@ -1,7 +1,10 @@
 [versions]
 
 agp = "8.1.2"
+activityCompose = "1.9.2"
+uiComposeVersion = "1.7.3"
 kotlin = "1.8.22"
+kotlinVersion = "2.0.20"
 coreKtx = "1.10.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
@@ -10,10 +13,21 @@ appcompat = "1.6.1"
 material = "1.9.0"
 uiAndroid = "1.5.3"
 material3Android = "1.2.1"
-
+activity = "1.9.3"
+constraintlayout = "2.1.4"
+runtimeAndroid = "1.7.5"
+uiToolingPreviewAndroid = "1.7.5"
+composeBom = "2024.09.03"
 
 
 [libraries]
+
+# Compose
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "uiComposeVersion" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -22,9 +36,14 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-ui-android = { group = "androidx.compose.ui", name = "ui-android", version.ref = "uiAndroid" }
 androidx-material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3Android" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-runtime-android = { group = "androidx.compose.runtime", name = "runtime-android", version.ref = "runtimeAndroid" }
+androidx-ui-tooling-preview-android = { group = "androidx.compose.ui", name = "ui-tooling-preview-android", version.ref = "uiToolingPreviewAndroid" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinVersion" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlinVersion" }
