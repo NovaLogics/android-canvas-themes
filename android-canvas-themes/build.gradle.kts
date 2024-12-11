@@ -59,9 +59,9 @@ afterEvaluate {
         publications {
             create<MavenPublication>("release") { // Use Kotlin DSL type-safe builder
                 from(components["release"]) // Ensure your module is using a release build variant
-                groupId = "com.github.NovaLogics"
+                groupId = "com.github.novalogics"
                 artifactId = "android-canvas-themes"
-                version = "0.0.5"
+                version = "0.0.6"
             }
         }
     }
