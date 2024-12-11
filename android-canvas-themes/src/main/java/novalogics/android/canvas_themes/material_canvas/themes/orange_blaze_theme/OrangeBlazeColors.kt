@@ -1,8 +1,8 @@
-package novalogics.android.canvas_themes.material_canvas.themes
+package novalogics.android.canvas_themes.material_canvas.themes.orange_blaze_theme
 
 import androidx.compose.ui.graphics.Color
 
-object OrangeBlazeTheme {
+object OrangeBlazeColors {
     object Light {
         val primary = Color(0xFFFF9800) // Primary color (Orange)
         val onPrimary = Color(0xFFFFFFFF) // Content on primary (White)
