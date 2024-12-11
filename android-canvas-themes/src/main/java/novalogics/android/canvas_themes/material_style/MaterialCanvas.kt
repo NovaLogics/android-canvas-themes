@@ -1,8 +1,8 @@
-package novalogics.android.canvas_themes
+package novalogics.android.canvas_themes.material_style
 
 
 import androidx.compose.material3.ColorScheme
-import novalogics.android.canvas_themes.handler.ThemeManager
+import novalogics.android.canvas_themes.material_style.handler.ThemeManager
 
 class MaterialCanvas {
     private val themeManager: ThemeManager = ThemeManager
