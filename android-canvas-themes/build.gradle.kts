@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "novalogics.android.canvas_themes"
+    namespace = "novalogics.android.canvasthemes"
     compileSdk = 34
 
     defaultConfig {
@@ -61,7 +61,7 @@ afterEvaluate {
                 from(components["release"]) // Ensure your module is using a release build variant
                 groupId = "com.github.novalogics"
                 artifactId = "android-canvas-themes"
-                version = "0.0.6"
+                version = "0.0.7"
             }
         }
     }
