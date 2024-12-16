@@ -22,7 +22,7 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 <br>
 <br>
 
-<img src="./_archive/screenshots/screenshot_green_blaze_dark.png" width="220" height="480" />
+<img src="_archive\demo\img_banner.png" width="520" height="180" />
 
 <br>
 
@@ -33,23 +33,57 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 
 [![Jitpack Releases](https://img.shields.io/badge/-Jitpack%20|%201.0.0-1C1E24?logo=planetscale&logoColor=00C7B7&style=for-the-badge)](#)
 
-Add the following to your project's settings.gradle to enable JitPack:
+ Adding the Library to Your Project
 
-```md
+### ⭓ Using Groovy DSL
+
+1. Add the following to your `settings.gradle` file to enable JitPack:
+
+```groovy
+dependencyResolutionManagement {
+  repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+     repositories {
+       mavenCentral()
+       maven { url 'https://jitpack.io' }
+  }
+}
+```
+
+
+2. Then, add the dependency to your `build.gradle` file:
+
+```groovy
+dependencies {
+    implementation 'com.github.novalogics:android-canvas-themes:1.0.0'
+}
+```
+
+#
+
+### ⭓ Using Kotlin DSL
+
+1. Add the following to your `settings.gradle.kts` file to enable JitPack:
+
+```groovy
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        google()
         mavenCentral()
-        maven { url 'https://jitpack.io' }
+        maven { url = uri("https://jitpack.io") }
     }
 }
 ```
-Then, add the dependency to your build.gradle file:
-```md
+
+
+2. Then, add the dependency to your `build.gradle.kts` file:
+
+```groovy
 dependencies {
-    implementation 'com.github.novalogics:android-canvas-themes:0.0.7'
+    implementation("com.github.novalogics:android-canvas-themes:1.0.0")
 }
 ```
+
 
 <br>
 
@@ -64,20 +98,11 @@ val lightColorScheme = MaterialCanvas.amberBlazeTheme.lightColorScheme
 
 val darkColorScheme = MaterialCanvas.greenBlazeTheme.darkColorScheme
 ```
-
 #
-#### Example: Applying Colors
-Use the colors directly in your components:
-```kotlin
-val primaryColor = MaterialCanvas.greenBlazeTheme.lightColors.primary
+### Applying Light and Dark Mode | *Theming with Material3*
 
-val darkBackground = MaterialCanvas.purpleBlazeTheme.darkColors.background
-```
+#### Example: 
 
-#
-#### Example: Applying a Theme
-
-**Applying Light and Dark Mode**  
 The library makes it easy to dynamically apply light and dark mode themes using MaterialTheme from Material3. Here’s an example:
 
 ```kotlin
@@ -130,6 +155,257 @@ fun MyApp() {
     }
 }
 ```
+#
+### Applying Colors
+
+#### Example: 
+
+Use the colors directly in your components:
+```kotlin
+val primaryColor = MaterialCanvas.greenBlazeTheme.lightColors.primary
+
+val darkBackground = MaterialCanvas.purpleBlazeTheme.darkColors.background
+```
+
+#
+### ⭓ Supported Themes
+The library includes the following themes:
+
+<details>
+ <summary><strong>1. Grayscale Theme</strong></summary>
+<br>
+
+Here’s how you can access colors and color schemes for Grayscale theme:
+
+```kotlin
+// Access colors
+val primaryColor = MaterialCanvas.grayscaleTheme.lightColors.primary
+val onPrimaryColor = MaterialCanvas.grayscaleTheme.darkColors.onPrimary
+
+// Access color schemes
+val lightScheme = MaterialCanvas.grayscaleTheme.lightColorScheme
+val darkScheme = MaterialCanvas.grayscaleTheme.darkColorScheme
+```
+
+<div align="center">
+<img 
+  src="_archive\screenshots\screenshot_grayscale_light.png" 
+  width="210" height="460" 
+  />
+<img 
+  src="_archive\screenshots\screenshot_grayscale_dark.png" 
+   width="210" height="460" 
+  />
+</div>
+</details>
+
+#
+
+<details>
+ <summary><strong>2. Amber Blaze Theme</strong></summary>
+<br>
+
+Here’s how you can access colors and color schemes for Amber theme:
+
+```kotlin
+// Access colors
+val primaryColor = MaterialCanvas.amberBlazeTheme.lightColors.primary
+val onPrimaryColor = MaterialCanvas.amberBlazeTheme.darkColors.onPrimary
+
+// Access color schemes
+val lightScheme = MaterialCanvas.amberBlazeTheme.lightColorScheme
+val darkScheme = MaterialCanvas.amberBlazeTheme.darkColorScheme
+```
+
+<div align="center">
+<img 
+  src="_archive\screenshots\screenshot_amber_blaze_light.png" 
+  width="210" height="460" 
+  />
+<img 
+  src="_archive\screenshots\screenshot_amber_blaze_dark.png" 
+   width="210" height="460" 
+  />
+</div>
+</details>
+
+#
+
+<details>
+ <summary><strong>3. Orange Blaze Theme</strong></summary>
+<br>
+
+Here’s how you can access colors and color schemes for Orange theme:
+
+```kotlin
+// Access colors
+val primaryColor = MaterialCanvas.orangeBlazeTheme.lightColors.primary
+val onPrimaryColor = MaterialCanvas.orangeBlazeTheme.darkColors.onPrimary
+
+// Access color schemes
+val lightScheme = MaterialCanvas.orangeBlazeTheme.lightColorScheme
+val darkScheme = MaterialCanvas.orangeBlazeTheme.darkColorScheme
+```
+
+<div align="center">
+<img 
+  src="_archive\screenshots\screenshot_orange_blaze_light.png" 
+  width="210" height="460" 
+  />
+<img 
+  src="_archive\screenshots\screenshot_orange_blaze_dark.png" 
+   width="210" height="460" 
+  />
+</div>
+</details>
+
+#
+
+<details>
+ <summary><strong>4. Blue Blaze Theme</strong></summary>
+<br>
+
+Here’s how you can access colors and color schemes for Blue theme:
+
+```kotlin
+// Access colors
+val primaryColor = MaterialCanvas.blueBlazeTheme.lightColors.primary
+val onPrimaryColor = MaterialCanvas.blueBlazeTheme.darkColors.onPrimary
+
+// Access color schemes
+val lightScheme = MaterialCanvas.blueBlazeTheme.lightColorScheme
+val darkScheme = MaterialCanvas.blueBlazeTheme.darkColorScheme
+```
+
+<div align="center">
+<img 
+  src="_archive\screenshots\screenshot_blue_blaze_light.png" 
+  width="210" height="460" 
+  />
+<img 
+  src="_archive\screenshots\screenshot_blue_blaze_dark.png" 
+   width="210" height="460" 
+  />
+</div>
+</details>
+
+#
+
+<details>
+ <summary><strong>5. Green Blaze Theme</strong></summary>
+<br>
+
+Here’s how you can access colors and color schemes for Green theme:
+
+```kotlin
+// Access colors
+val primaryColor = MaterialCanvas.greenBlazeTheme.lightColors.primary
+val onPrimaryColor = MaterialCanvas.greenBlazeTheme.darkColors.onPrimary
+
+// Access color schemes
+val lightScheme = MaterialCanvas.greenBlazeTheme.lightColorScheme
+val darkScheme = MaterialCanvas.greenBlazeTheme.darkColorScheme
+```
+<div align="center">
+<img 
+  src="_archive\screenshots\screenshot_green_blaze_light.png" 
+  width="210" height="460" 
+  />
+<img 
+  src="_archive\screenshots\screenshot_green_blaze_dark.png" 
+   width="210" height="460" 
+  />
+</div>
+</details>
+
+#
+
+<details>
+ <summary><strong>6. Purple Blaze Theme</strong></summary>
+<br>
+
+Here’s how you can access colors and color schemes for Purple theme:
+
+```kotlin
+// Access colors
+val primaryColor = MaterialCanvas.purpleBlazeTheme.lightColors.primary
+val onPrimaryColor = MaterialCanvas.purpleBlazeTheme.darkColors.onPrimary
+
+// Access color schemes
+val lightScheme = MaterialCanvas.purpleBlazeTheme.lightColorScheme
+val darkScheme = MaterialCanvas.purpleBlazeTheme.darkColorScheme
+```
+<div align="center">
+<img 
+  src="_archive\screenshots\screenshot_purple_blaze_light.png" 
+  width="210" height="460" 
+  />
+<img 
+  src="_archive\screenshots\screenshot_purple_blaze_dark.png" 
+   width="210" height="460" 
+  />
+</div>
+</details>
+
+#
+
+<details>
+ <summary><strong>7. Red Blaze Theme</strong></summary>
+<br>
+
+Here’s how you can access colors and color schemes for Red theme:
+
+```kotlin
+// Access colors
+val primaryColor = MaterialCanvas.redBlazeTheme.lightColors.primary
+val onPrimaryColor = MaterialCanvas.redBlazeTheme.darkColors.onPrimary
+
+// Access color schemes
+val lightScheme = MaterialCanvas.redBlazeTheme.lightColorScheme
+val darkScheme = MaterialCanvas.redBlazeTheme.darkColorScheme
+```
+<div align="center">
+<img 
+  src="_archive\screenshots\screenshot_red_blaze_light.png" 
+  width="210" height="460" 
+  />
+<img 
+  src="_archive\screenshots\screenshot_red_blaze_dark.png" 
+   width="210" height="460" 
+  />
+</div>
+</details>
+
+#
+
+<details>
+ <summary><strong>8. Teal Blaze Theme</strong></summary>
+<br>
+
+Here’s how you can access colors and color schemes for Teal theme:
+
+```kotlin
+// Access colors
+val primaryColor = MaterialCanvas.tealBlazeTheme.lightColors.primary
+val onPrimaryColor = MaterialCanvas.tealBlazeTheme.darkColors.onPrimary
+
+// Access color schemes
+val lightScheme = MaterialCanvas.tealBlazeTheme.lightColorScheme
+val darkScheme = MaterialCanvas.tealBlazeTheme.darkColorScheme
+```
+<div align="center">
+<img 
+  src="_archive\screenshots\screenshot_teal_blaze_light.png" 
+  width="210" height="460" 
+  />
+<img 
+  src="_archive\screenshots\screenshot_teal_blaze_dark.png" 
+   width="210" height="460" 
+  />
+</div>
+</details>
+
+<br>
 
 #
 ### ⭓ Library Features
@@ -158,28 +434,36 @@ fun MyApp() {
 
 <p align="center">
 <img 
-  src="./_archive/screenshots/screenshot_green_blaze.png" 
-   width="210" height="460" 
+  src="./_archive/screenshots/screenshot_grayscale_light.png" 
+   width="160" height="360" 
   />
 <img 
-  src="./_archive/screenshots/screenshot_green_blaze.png" 
-  width="210" height="460" 
+  src="./_archive/screenshots/screenshot_amber_blaze_light.png" 
+  width="160" height="360" 
   />
 <img
-    src="./_archive/screenshots/screenshot_green_blaze.png" 
-    width="210" height="460"
+    src="./_archive/screenshots/screenshot_orange_blaze_light.png" 
+   width="160" height="360" 
   />
 <img
-     src="./_archive/screenshots/screenshot_green_blaze.png" 
-    width="210" height="460"
+     src="./_archive/screenshots/screenshot_blue_blaze_light.png" 
+    width="160" height="360" 
   />
   <img
-    src="./_archive/screenshots/screenshot_green_blaze.png" 
-    width="210" height="460"
+    src="./_archive/screenshots/screenshot_green_blaze_dark.png" 
+    width="160" height="360" 
   />
 <img
-     src="./_archive/screenshots/screenshot_green_blaze.png" 
-    width="210" height="460"
+     src="./_archive/screenshots/screenshot_purple_blaze_dark.png" 
+    width="160" height="360" 
+  />
+  <img
+     src="./_archive/screenshots/screenshot_red_blaze_dark.png" 
+    width="160" height="360" 
+  />
+  <img
+     src="./_archive/screenshots/screenshot_teal_blaze_dark.png" 
+    width="160" height="360" 
   />
 </p>
 
