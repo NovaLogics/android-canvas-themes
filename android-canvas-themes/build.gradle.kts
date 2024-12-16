@@ -61,7 +61,7 @@ afterEvaluate {
                 from(components["release"]) // Ensure your module is using a release build variant
                 groupId = "com.github.novalogics"
                 artifactId = "android-canvas-themes"
-                version = "0.0.7"
+                version = "1.0.0"
             }
         }
     }

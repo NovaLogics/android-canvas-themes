@@ -31,14 +31,17 @@ import androidx.compose.ui.unit.sp
 import novalogics.android.androidcanvas.R
 import novalogics.android.canvasthemes.MaterialCanvas
 
+
+val colorScheme = MaterialCanvas.amberBlazeTheme.darkColorScheme
+
 @Composable
 fun ThemeDemoScreen() {
-    val colorScheme = MaterialCanvas.greenBlazeTheme.darkColorScheme
     val isLightMode = false
-    val themeName = "Orange Blaze Theme"
+    val themeName = "Amber Blaze Theme"
 
     val currentMode = if (isLightMode) " ✦ Light Mode ✦" else " ✧ Dark Mode ✧"
     val imageRes = if (isLightMode) R.drawable.ic_light_mode else R.drawable.ic_night_mode
+
 
     Box(
         modifier = Modifier
@@ -48,7 +51,7 @@ fun ThemeDemoScreen() {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(start =  12.dp, bottom = 12.dp, end = 12.dp, top = 38.dp)
+                .padding(start = 12.dp, bottom = 12.dp, end = 12.dp, top = 38.dp)
         ) {
             ThemeCard(
                 colorScheme = colorScheme,
@@ -74,7 +77,7 @@ fun ThemeDemoScreen() {
 
 @Composable
 fun ThemeCard(colorScheme: ColorScheme, currentMode: String, themeName: String) {
-val cardShape = RoundedCornerShape(topStart = 16.dp, bottomEnd = 16.dp)
+    val cardShape = RoundedCornerShape(topStart = 16.dp, bottomEnd = 16.dp)
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -312,7 +315,7 @@ fun CardItem(text: String, icon: ImageVector, surface: Color, onSurface: Color) 
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
         colors = CardDefaults.cardColors(containerColor = surface),
 
-    ) {
+        ) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
