@@ -22,7 +22,7 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 <br>
 <br>
 
-<img src="_archive\demo\img_banner.png" width="520" height="180" />
+<img src="_archive\demo\img_banner.png"/>
 
 <br>
 
