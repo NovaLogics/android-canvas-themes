@@ -22,7 +22,7 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 <br>
 <br>
 
-<img src="./_archive/screenshots/screenshot_green_blaze.png" width="220" height="480" />
+<img src="./_archive/screenshots/screenshot_green_blaze_dark.png" width="220" height="480" />
 
 <br>
 
@@ -31,7 +31,7 @@ Android Canvas Themes is a Kotlin library that offers a range of Material Design
 ## ɪɪ ⁃ ɪɴꜱᴛᴀʟʟᴀᴛɪᴏɴ
 
 
-[![Jitpack Releases](https://img.shields.io/badge/-Jitpack%20|%200.0.7-1C1E24?logo=planetscale&logoColor=00C7B7&style=for-the-badge)](#)
+[![Jitpack Releases](https://img.shields.io/badge/-Jitpack%20|%201.0.0-1C1E24?logo=planetscale&logoColor=00C7B7&style=for-the-badge)](#)
 
 Add the following to your project's settings.gradle to enable JitPack:
 
@@ -57,38 +57,92 @@ dependencies {
 
 ### ⭓ Accessing Themes
 
-The library provides multiple pre-built themes, accessible through the MaterialCanvas object. Each theme contains both lightColorScheme and darkColorScheme.
+You can use the predefined themes available in the **MaterialCanvas** object. Each theme provides` lightColors, darkColors, lightColorScheme, and darkColorScheme` for customization.
 
-```md
-MaterialCanvas.greenBlazeTheme.darkColorScheme
-MaterialCanvas.amberBlazeTheme.lightColors.primary
+```kotlin
+val lightColorScheme = MaterialCanvas.amberBlazeTheme.lightColorScheme
+
+val darkColorScheme = MaterialCanvas.greenBlazeTheme.darkColorScheme
 ```
 
+#
+#### Example: Applying Colors
+Use the colors directly in your components:
+```kotlin
+val primaryColor = MaterialCanvas.greenBlazeTheme.lightColors.primary
+
+val darkBackground = MaterialCanvas.purpleBlazeTheme.darkColors.background
+```
+
+#
 #### Example: Applying a Theme
-To apply a theme in your composables, use the MaterialTheme and pass the desired color scheme.
 
-```md
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.runtime.Composable
-import com.example.android.canvasthemes.MaterialCanvas
+**Applying Light and Dark Mode**  
+The library makes it easy to dynamically apply light and dark mode themes using MaterialTheme from Material3. Here’s an example:
 
+```kotlin
+@Composable
+fun AppTheme(
+  // Automatically detect system dark mode
+    darkTheme: Boolean = isSystemInDarkTheme(), 
+    content: @Composable () -> Unit
+) {
+  // ** Applying Green Blaze Theme > Light & Dark **
+    val colorScheme = if (darkTheme) {
+        MaterialCanvas.greenBlazeTheme.darkColorScheme
+    } else {
+        MaterialCanvas.greenBlazeTheme.lightColorScheme
+    }
+
+    // Edge-to-edge configuration
+    val view = LocalView.current
+    if (!view.isInEditMode) {
+        SideEffect {
+            setUpEdgeToEdge(view, darkTheme)
+        }
+    }
+
+    // Apply Material Theme
+    MaterialTheme(
+        colorScheme = colorScheme,
+        typography = Typography,
+        shapes = Shapes,
+        content = content
+    )
+}
+```
+
+**Usage in Your App**
+
+```kotlin
 @Composable
 fun MyApp() {
-MaterialTheme(colorScheme = MaterialCanvas.amberBlazeTheme.lightColorScheme) {
-// Your UI components go here
-}
+    AppTheme { // Automatically adapts to system's light or dark mode
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colorScheme.background
+        ) {
+            Text(
+                text = "Welcome to Android Canvas Themes!",
+                color = MaterialTheme.colorScheme.onBackground
+            )
+        }
+    }
 }
 ```
 
+#
 ### ⭓ Library Features
 
-- **Predefined Themes**: Includes multiple color themes such as Amber Blaze, Green Blaze, Purple Blaze, and more.
+- **Material Design Color Themes**: Includes a range of themes inspired by Material Design principles.
 
-- **Light and Dark Modes**: Each theme comes with predefined color schemes for light and dark modes.
+- **Predefined Themes**: Ready to use themes such as ***Grayscale, Amber Blaze, Orange Blaze, Blue Blaze, Green Blaze, Purple Blaze, Red Blaze, and Teal Blaze***
 
-- **Material Design Standards**: Fully compatible with Material Design guidelines.
+- **Light and Dark Mode Support**: All themes provide `lightColors` and `darkColors` for seamless transitions between modes.
 
-- **Easy Integration**: Available on JitPack for quick integration.
+- **Easy Integration**: Simple API for accessing color schemes and palettes.
+
+- **JitPack Compatibility**: Easily add the library to your project using JitPack.
 
 ##
 ### ⭓ Requirements
